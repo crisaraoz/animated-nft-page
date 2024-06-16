@@ -69,7 +69,7 @@ function Footer() {
 const FooterStyled = styled.footer`
   position: relative;
   z-index: 10;
-  padding: 3rem 5rem 0 5rem;
+  padding: 3rem 1rem 0 5rem;
   background-color: var(--color-bg);
   border-top: 1px solid var(--color-border);
 
@@ -117,7 +117,7 @@ const FooterStyled = styled.footer`
       .socials {
         display: flex;
         gap: 1rem;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         svg {
           cursor: pointer;
           transition: all 0.3s ease-in-out;
@@ -140,7 +140,7 @@ const FooterStyled = styled.footer`
       gap: 2rem;
       
       h4 {
-        font-size: 1.5rem;
+        font-size: 1rem;
         margin-bottom: 1rem;
       }
 
