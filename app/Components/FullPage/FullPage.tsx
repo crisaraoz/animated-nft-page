@@ -9,9 +9,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 function Fullpage() {
   const secRef = React.useRef<HTMLDivElement>(null);
 
-  // ScrollYProgress is a value between 0 and 1
   const { scrollYProgress } = useScroll({
-    //target is the element that we want to track
     target: secRef,
     offset: ["start end", "end start"],
   });
