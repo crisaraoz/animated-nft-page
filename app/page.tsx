@@ -5,6 +5,7 @@ import styles from "./page.module.css";
 import Hero from "./Components/Hero/Hero";
 import styled from "styled-components";
 import Fullpage from "./Components/FullPage/FullPage";
+import Footer from "./Components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
     <Hero />
     <MainStyled>
       <Fullpage />
+      <Footer />
     </MainStyled>
     </>
   );
