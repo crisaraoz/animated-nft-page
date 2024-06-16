@@ -10,6 +10,7 @@ import SectionLayout from "./Components/SectionLayout/SectionLayout";
 import HorizontalWrapper from "./Components/HorizontalWrapper/HorizontalWrapper";
 import Card from "./Components/Card/Card";
 import { cards } from "./utils/cards";
+import ZoomSection from "./Components/ZoomSection/ZoomSection";
 
 export default function Home() {
   return (
@@ -32,8 +33,11 @@ export default function Home() {
             </div>
         </HorizontalWrapper>
       </SectionLayout>
-
       <Fullpage />
+      <SectionLayout>
+          <ZoomSection></ZoomSection>
+        </SectionLayout>
+        
       <Footer />
     </MainStyled>
     </>
