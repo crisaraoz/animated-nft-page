@@ -21,7 +21,6 @@ function Footer() {
         <div className="logo-con">
           <div className="logo">
             <Image src={logo} width={36} alt="logo" />
-            <h2>Logo</h2>
           </div>
           <div className="input">
             <input type="text" placeholder="Subscribe here..." />
