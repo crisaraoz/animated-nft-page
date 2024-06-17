@@ -30,6 +30,11 @@ function HorizontalWrapper({ children, direction, height }: Props) {
           zIndex: 6,
           position: "relative",
           translateX: xTransform,
+          display: "flex",
+          flexDirection: "row",
+          overflowX: "auto",
+          scrollSnapType: "x proximity",
+          scrollbarWidth: "none", 
         }}
       >
         {children}

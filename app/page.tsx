@@ -18,8 +18,8 @@ export default function Home() {
     <Hero />
     <MainStyled>
       <SectionLayout>
-        <HorizontalWrapper height="40rem" direction={-1400}>
-        <div className="cards" style={{ right: 0 }}>
+        <HorizontalWrapper height="30rem" direction={-300}>
+        <div className="cards">
               {cards.map((card: any, index: number) => {
                 return (
                   <Card
@@ -35,8 +35,8 @@ export default function Home() {
       </SectionLayout>
       <Fullpage />
       <SectionLayout>
-          <HorizontalWrapper height="40rem" direction={1400}>
-            <div className="cards" style={{ right: 0 }}>
+          <HorizontalWrapper height="30rem" direction={300}>
+            <div className="cards">
               {cards.map((card, index) => {
                 return (
                   <Card
@@ -71,17 +71,18 @@ const MainStyled = styled.main`
   width: 100%;
 
   .cards {
-    position: absolute;
     display: grid;
     grid-template-columns: repeat(5, 20rem);
     gap: 2rem;
 
     @media (max-width: 992px) {
-    grid-template-columns: repeat(2, 20rem);
+    //grid-template-columns: repeat(1, 10rem);
+    flex-direction: column;
     }
 
     @media (max-width: 576px) {
-      grid-template-columns: 20rem;
+      grid-template-columns: 10rem;
+      flex-direction: column;
     }
   }
 `;
