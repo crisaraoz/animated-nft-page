@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import styles from "./page.module.css";
 import Hero from "./Components/Hero/Hero";
 import styled from "styled-components";
 import Fullpage from "./Components/FullPage/FullPage";
@@ -14,6 +12,7 @@ import ZoomSection from "./Components/ZoomSection/ZoomSection";
 import TextSection from "./Components/TextSection/TextSection";
 
 export default function Home() {
+
   return (
     <>
     <Hero />
@@ -75,17 +74,14 @@ const MainStyled = styled.main`
     position: absolute;
     display: grid;
     grid-template-columns: repeat(5, 20rem);
-    gap: 4rem;
-  }
+    gap: 2rem;
 
-  .video {
-    padding: 2rem;
-    background-color: #161616;
-    border-radius: 1rem;
-    iframe {
-      border: none;
-      width: 100%;
-      height: 52rem;
+    @media (max-width: 992px) {
+    grid-template-columns: repeat(2, 20rem);
+    }
+
+    @media (max-width: 576px) {
+      grid-template-columns: 20rem;
     }
   }
 `;
