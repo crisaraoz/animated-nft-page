@@ -31,7 +31,7 @@ function ZoomSection() {
       <div
         className="image"
         style={{
-          height: "50rem",
+          height: "40rem",
           width: "100%",
         }}
       >
@@ -55,8 +55,8 @@ function ZoomSection() {
           src="/images/arm2.jpg"
           alt="bulb tree"
           className="monkey"
-          width={500}
-          height={500}
+          width={400}
+          height={400}
           style={{
             objectFit: "cover",
             objectPosition: "50% 0%",
@@ -69,8 +69,8 @@ function ZoomSection() {
           src="/images/arm.jpg"
           alt="bulb tree"
           className="smoke"
-          width={500}
-          height={500}
+          width={400}
+          height={400}
           style={{
             objectFit: "cover",
             objectPosition: "center",

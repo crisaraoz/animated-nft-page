@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import styles from "./page.module.css";
 import Hero from "./Components/Hero/Hero";
 import styled from "styled-components";
 import Fullpage from "./Components/FullPage/FullPage";
@@ -11,8 +9,10 @@ import HorizontalWrapper from "./Components/HorizontalWrapper/HorizontalWrapper"
 import Card from "./Components/Card/Card";
 import { cards } from "./utils/cards";
 import ZoomSection from "./Components/ZoomSection/ZoomSection";
+import TextSection from "./Components/TextSection/TextSection";
 
 export default function Home() {
+
   return (
     <>
     <Hero />
@@ -35,8 +35,29 @@ export default function Home() {
       </SectionLayout>
       <Fullpage />
       <SectionLayout>
-          <ZoomSection></ZoomSection>
+          <HorizontalWrapper height="40rem" direction={1400}>
+            <div className="cards" style={{ right: 0 }}>
+              {cards.map((card, index) => {
+                return (
+                  <Card
+                    key={index}
+                    title={card.title}
+                    description={card.description}
+                    image={card.image}
+                  />
+                );
+              })}
+            </div>
+          </HorizontalWrapper>
+      </SectionLayout>
+      
+      <SectionLayout>
+          <TextSection />
         </SectionLayout>
+
+      <SectionLayout>
+          <ZoomSection></ZoomSection>
+      </SectionLayout>
         
       <Footer />
     </MainStyled>
@@ -52,18 +73,15 @@ const MainStyled = styled.main`
   .cards {
     position: absolute;
     display: grid;
-    grid-template-columns: repeat(4, 20rem);
-    gap: 4rem;
-  }
+    grid-template-columns: repeat(5, 20rem);
+    gap: 2rem;
 
-  .video {
-    padding: 2rem;
-    background-color: #161616;
-    border-radius: 1rem;
-    iframe {
-      border: none;
-      width: 100%;
-      height: 52rem;
+    @media (max-width: 992px) {
+    grid-template-columns: repeat(2, 20rem);
+    }
+
+    @media (max-width: 576px) {
+      grid-template-columns: 20rem;
     }
   }
 `;
