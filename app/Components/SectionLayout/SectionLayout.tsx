@@ -9,7 +9,7 @@ function SectionLayout({ children, ref }: SectionLayoutProps) {
   return (
     <section
       style={{
-        padding: "5rem 10rem",
+        padding: "4rem 0rem 4rem 0rem",
       }}
     >
       {children}
